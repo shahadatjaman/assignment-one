@@ -1,38 +1,30 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Hide the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Define the appearance of the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #4a5568;
+  border-radius: 4px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.thumbs-wrapper.axis-vertical {
+  display: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bg-img {
+  width: 100%;
+  line-height: 0;
+  box-sizing: border-box;
+  background: url("https://res.cloudinary.com/dza2t1htw/image/upload/v1685022950/img.7f38dc76_tfykz3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
 }

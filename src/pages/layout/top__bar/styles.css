@@ -1,0 +1,48 @@
+/**
+ * 1. Top bar style
+ * 2. Account menu styles
+ * 3. Avatar styles
+ */
+
+/* 1. Top bar component style */
+
+.topbar-wrapper {
+  @apply bg-gray-two border-b-2 border-b-slate-800 fixed w-full top-0 left-0 h-16 flex justify-end;
+}
+
+.topbar_left {
+  @apply w-3/6 ml-4 text-white relative flex justify-start items-center;
+}
+
+.topbar_right {
+  @apply w-3/6 pl-24 mr-6 text-white flex justify-end;
+}
+
+.topbar_ul {
+  @apply flex items-center justify-end;
+}
+
+.topbar_li {
+  @apply flex items-center relative mr-5 cursor-pointer text-white font-medium text-xl;
+}
+
+/* 2 Acount menu styles */
+
+/* Ul styled */
+.ul-styled {
+  @apply bg-gray-one p-7 rounded;
+}
+
+.li-styled {
+  @apply border-b-2 mb-4;
+}
+
+.profile_styled {
+  @apply flex justify-start items-center hover:bg-gray-three border-b-slate-600 p-3 rounded cursor-pointer;
+}
+
+/* 3. Avatar styles */
+
+.avatar-wrapper {
+  @apply rounded-full overflow-hidden;
+}
