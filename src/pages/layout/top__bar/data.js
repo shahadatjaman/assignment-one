@@ -15,12 +15,12 @@ export const user = {
 };
 
 export const items = [
-  {
-    name: user.name,
-    img: user.avatr,
-    username: user.username,
-    isBordBottom: true,
-  },
+  // {
+  //   name: user.name,
+  //   img: user.avatr,
+  //   username: user.username,
+  //   isBordBottom: true,
+  // },
   {
     name: "Portfolio",
     icon: <BsFillCreditCardFill />,
@@ -47,9 +47,5 @@ export const items = [
   {
     name: "Support",
     icon: <BsFillQuestionOctagonFill />,
-  },
-  {
-    name: "Logout",
-    icon: <BsFillCaretRightFill />,
   },
 ];

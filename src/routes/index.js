@@ -1,13 +1,23 @@
 import Home from "../pages/home";
 import Login from "../pages/login";
+import { ProtectedRouter } from "./PrivateRouter";
+import { PublicdRouter } from "./PublicRouter";
 
 export const routes = [
   {
     path: "/",
-    element: <Home />,
+    element: (
+      <ProtectedRouter>
+        <Home />
+      </ProtectedRouter>
+    ),
   },
   {
     path: "/login",
-    element: <Login />,
+    element: (
+      <PublicdRouter>
+        <Login />
+      </PublicdRouter>
+    ),
   },
 ];

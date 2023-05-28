@@ -4,13 +4,15 @@ import { BiChevronDown } from "react-icons/bi";
 import { BsJustify } from "react-icons/bs";
 import Avatar from "./Avatar";
 import Account from "./Account";
-import { user } from "./data";
+
 import useModal from "../../../hook/useModal";
 import { useWindowWidth } from "../../../hook/useWidth";
 import Drawer from "../../../shared/drawer";
 import AccountMenu from "./AccountMenu";
+import { useSelector } from "react-redux";
 
 const TopBar = (props) => {
+  const { user } = useSelector((state) => state.auth);
   const isMatch = useWindowWidth({ width: 900 });
   const { isOpen, closeHandler, openHandler } = useModal();
   return (
@@ -30,7 +32,11 @@ const TopBar = (props) => {
               {!isMatch && <span>Social</span>}
             </li>
             <li className="topbar_li" onMouseEnter={openHandler}>
-              <Avatar width={"w-6"} src_url={user.avatr} alt_name={user.name} />
+              <Avatar
+                width={"w-6"}
+                src_url={user?.avatar}
+                alt_name={user?.fullname}
+              />
               {!isMatch && (
                 <>
                   <span className="ml-2">Account</span>
