@@ -18,8 +18,10 @@ const SideBar = ({ closeHandler }) => {
 
       {/* Logo */}
       <div className="logo-wrapper">
-        <img className="w-12" src={logo} alt="stockgro" />
-        <h3 className="logo-h3">StockGro</h3>
+        <Link to={"/"}>
+          <img className="w-12" src={logo} alt="stockgro" />
+          <h3 className="logo-h3">StockGro</h3>
+        </Link>
       </div>
 
       {/* Menu */}

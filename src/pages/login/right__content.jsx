@@ -8,6 +8,7 @@ const RightContent = () => {
       <Carousel autoPlay={true} showArrows={false}>
         {slides?.map((item, index) => (
           <div className="h-screen" key={index}>
+            <img className="opacity-0" src="" alt="." />
             <div className="pt-24 pl-20 text-left">
               <h4 className="text-5xl text-white">{item.subTitleOne}</h4>
               <h2 className="text-yellow-400 text-6xl uppercase font-bold mt-3 inline-block mr-7">

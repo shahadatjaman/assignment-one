@@ -1,11 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { Mutex } from "async-mutex";
-
-// Create a new mutex
-const mutex = new Mutex();
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: "http://localhost:5000",
+  baseUrl: process.env.REACT_APP_SERVER_URL,
   prepareHeaders: async (headers, { getState }) => {
     const token = getState()?.auth?.access;
     if (token) {

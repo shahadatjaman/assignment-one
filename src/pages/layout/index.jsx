@@ -1,4 +1,5 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 import "../layout/";
 import SideBar from "./side__bar";
 import TopBar from "./top__bar";
@@ -27,7 +28,9 @@ const Layout = ({ children }) => {
 
       <div className="flex-1 overflow-y-auto scroll-container scrollbar relative bg-gray-two">
         <TopBar openHandler={openHandler} />
-        {children}
+        <div className="mt-20 ml-14">
+          <Outlet />
+        </div>
       </div>
     </div>
   );

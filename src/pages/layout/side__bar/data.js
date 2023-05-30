@@ -16,22 +16,22 @@ export const menu = [
   },
   {
     name: "arena",
-    path: "/",
+    path: "/arena",
     icon: <BsFillTrophyFill />,
   },
   {
     name: "market",
-    path: "/",
+    path: "/market",
     icon: <BsMessenger />,
   },
   {
     name: "portfolio",
-    path: "/",
+    path: "/portfolio",
     icon: <BsFillBriefcaseFill />,
   },
   {
     name: "social",
-    path: "/",
+    path: "/social",
     icon: <BsFillChatRightDotsFill />,
   },
 ];

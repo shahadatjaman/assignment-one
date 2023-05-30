@@ -2,23 +2,23 @@ import React from "react";
 import { socialIcons } from "./data";
 import { signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../../config/";
-import { loginUser, useLoginMutation } from "../../features/auth/authApi";
-import { useDispatch } from "react-redux";
+import { useLoginMutation } from "../../features/auth/authApi";
 import { useNavigate } from "react-router-dom";
 
 const SocialIcons = () => {
   const navigate = useNavigate();
-
   const [login] = useLoginMutation();
 
   const authHandler = async () => {
     signInWithPopup(auth, provider).then(async (data) => {
       const { displayName, email, photoURL } = data.user;
+
       await login({
         fullname: displayName,
         email,
-        avatar: photoURL,
+        avatar: photoURL ? photoURL : "",
       });
+
       navigate("/");
     });
   };
@@ -30,7 +30,9 @@ const SocialIcons = () => {
           <li
             key={index}
             onClick={authHandler}
-            className="flex cursor-pointer mr-8 flex-col justify-center items-center"
+            className={`flex mr-8 flex-col justify-center items-center ${
+              social.name === "Google" && "cursor-pointer"
+            }`}
           >
             <span
               style={{ background: social.bg }}

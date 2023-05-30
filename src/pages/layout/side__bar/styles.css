@@ -6,7 +6,7 @@
  */
 
 /* 1. logo styles */
-.logo-wrapper {
+.logo-wrapper a {
   @apply flex justify-center items-center flex-col;
 }
 

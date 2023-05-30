@@ -3,9 +3,9 @@ import Layout from "../layout";
 
 const Home = () => {
   return (
-    <Layout>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </Layout>
+    <div>
+      <h1 className="text-3xl text-white font-bold">Home Page!</h1>
+    </div>
   );
 };
 
